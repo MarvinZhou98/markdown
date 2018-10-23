@@ -6,7 +6,7 @@ initEditor();
  */
 function initEditor() {
     /* 初始化编辑器 */
-    var editor = ace.edit("md-editor");
+    window.editor = ace.edit("md-editor");
 
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/markdown");
@@ -17,11 +17,11 @@ function initEditor() {
     editor.setValue(localStorage.localData || '');
 
     //解析
-    parseMarkdown(editor);
+    parseMarkdown();
 
     //绑定change事件
     editor.getSession().on("change", function (e) {
-        parseMarkdown(editor);
+        parseMarkdown();
     });
 
 }
@@ -29,7 +29,7 @@ function initEditor() {
 /**
  *  解析markdown
  */
-function parseMarkdown(editor) {
+function parseMarkdown() {
     var viewer = $("#md-viewer");
     var data = editor.getValue();
 
@@ -46,3 +46,18 @@ function parseMarkdown(editor) {
     });
 }
 
+/**
+ *   保存markdown
+ */
+function mdSave() {
+    //待实现
+    alert("保存");
+}
+
+/**
+ *   清空markdown
+ */
+function mdClear() {
+    localStorage.localData="";
+    location.reload();
+}
