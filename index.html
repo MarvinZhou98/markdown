@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>markdown editor</title>
 
-</body>
+        <!-- 引入CSS -->
+        <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="libs/highlightjs/default.min.css">
+        <link rel="stylesheet" href="libs/highlightjs/monokai_sublime.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- markdown编辑区 -->
+                <div class="col-md-6" id="md-editor">
+
+                </div>
+                <!-- markdown预览区 -->
+                <div class="col-md-6" id="md-viewer">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 引入JS -->
+        <script src="libs/jquery.min.js"></script>-
+        <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+        <script src="libs/ace/ace.js"></script>
+        <script src="libs/marked.min.js"></script>
+        <script src="libs/highlightjs/highlight.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
