@@ -1,7 +1,7 @@
 /* 编辑区 */
 #md-editor{
     position: absolute;
-    top: 0;
+    top: 10%;
     right: 0;
     bottom: 0;
     left: 0;
@@ -11,9 +11,19 @@
 /* 预览区 */
 #md-viewer{
     position: absolute;
-    top: 0;
+    top: 10%;
     right: 0;
     bottom: 0;
     left: 50%;
     overflow-y: scroll;
+}
+
+/* 顶部 */
+#head{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
 }
