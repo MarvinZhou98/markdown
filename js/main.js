@@ -36,6 +36,9 @@ function parseMarkdown() {
     //保存
     localStorage.localData = data;
 
+    //转义，预防xss
+    data = XssDefense.htmlEncodeByRegExp(data);
+
     //解析
     data = marked(data);
     viewer.html(data);
